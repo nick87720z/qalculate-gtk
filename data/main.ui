@@ -5159,7 +5159,7 @@ On: 1.1 * 1.1 ≈ 1.2</property>
                                   <object class="GtkImage">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="icon_name">edit-copy-symbolic.symbolic</property>
+                                    <property name="icon_name">edit-copy-symbolic</property>
                                   </object>
                                 </child>
                               </object>
@@ -5628,7 +5628,6 @@ On: 1.1 * 1.1 ≈ 1.2</property>
                                 <property name="can_focus">False</property>
                                 <property name="valign">start</property>
                                 <property name="orientation">vertical</property>
-                                <property name="homogeneous">True</property>
                                 <child>
                                   <object class="GtkButton" id="button_registerup">
                                     <property name="visible">True</property>
@@ -5642,7 +5641,7 @@ On: 1.1 * 1.1 ≈ 1.2</property>
                                       <object class="GtkImage">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="icon_name">go-up-symbolic.symbolic</property>
+                                        <property name="icon_name">go-up-symbolic</property>
                                       </object>
                                     </child>
                                   </object>
@@ -5665,7 +5664,7 @@ On: 1.1 * 1.1 ≈ 1.2</property>
                                       <object class="GtkImage">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="icon_name">go-down-symbolic.symbolic</property>
+                                        <property name="icon_name">go-down-symbolic</property>
                                       </object>
                                     </child>
                                   </object>
@@ -5688,29 +5687,17 @@ On: 1.1 * 1.1 ≈ 1.2</property>
                                       <object class="GtkBox">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="halign">center</property>
+                                        <property name="orientation">vertical</property>
                                         <child>
                                           <object class="GtkImage">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="icon_name">go-up-symbolic</property>
+                                            <property name="icon_name">exchange-symbolic</property>
                                           </object>
                                           <packing>
                                             <property name="expand">False</property>
                                             <property name="fill">True</property>
                                             <property name="position">0</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkImage">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="icon_name">go-down-symbolic</property>
-                                          </object>
-                                          <packing>
-                                            <property name="expand">False</property>
-                                            <property name="fill">True</property>
-                                            <property name="position">1</property>
                                           </packing>
                                         </child>
                                       </object>
@@ -5733,29 +5720,6 @@ On: 1.1 * 1.1 ≈ 1.2</property>
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkButton" id="button_editregister">
-                                <property name="visible">True</property>
-                                <property name="sensitive">False</property>
-                                <property name="can_focus">True</property>
-                                <property name="focus_on_click">False</property>
-                                <property name="receives_default">False</property>
-                                <property name="tooltip_text" translatable="yes">Edit the selected value.</property>
-                                <signal name="clicked" handler="on_button_editregister_clicked" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="icon_name">edit-symbolic</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
                               <object class="GtkBox">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
@@ -5774,7 +5738,7 @@ On: 1.1 * 1.1 ≈ 1.2</property>
                                       <object class="GtkImage">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="icon_name">edit-copy-symbolic.symbolic</property>
+                                        <property name="icon_name">edit-copy-symbolic</property>
                                       </object>
                                     </child>
                                   </object>
@@ -5782,6 +5746,29 @@ On: 1.1 * 1.1 ≈ 1.2</property>
                                     <property name="expand">False</property>
                                     <property name="fill">True</property>
                                     <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="button_editregister">
+                                    <property name="visible">True</property>
+                                    <property name="sensitive">False</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="focus_on_click">False</property>
+                                    <property name="receives_default">False</property>
+                                    <property name="tooltip_text" translatable="yes">Edit the selected value.</property>
+                                    <signal name="clicked" handler="on_button_editregister_clicked" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="icon_name">document-edit-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -5797,14 +5784,14 @@ On: 1.1 * 1.1 ≈ 1.2</property>
                                       <object class="GtkImage">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="icon_name">edit-delete-symbolic.symbolic</property>
+                                        <property name="icon_name">edit-delete-symbolic</property>
                                       </object>
                                     </child>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
                                     <property name="fill">True</property>
-                                    <property name="position">1</property>
+                                    <property name="position">2</property>
                                   </packing>
                                 </child>
                                 <style>
@@ -5814,7 +5801,7 @@ On: 1.1 * 1.1 ≈ 1.2</property>
                               <packing>
                                 <property name="expand">False</property>
                                 <property name="fill">True</property>
-                                <property name="position">2</property>
+                                <property name="position">1</property>
                               </packing>
                             </child>
                             <child>
@@ -5830,14 +5817,14 @@ On: 1.1 * 1.1 ≈ 1.2</property>
                                   <object class="GtkImage">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="icon_name">list-remove-all-symbolic</property>
+                                    <property name="icon_name">edit-clear-all-symbolic</property>
                                   </object>
                                 </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
                                 <property name="fill">True</property>
-                                <property name="position">3</property>
+                                <property name="position">2</property>
                               </packing>
                             </child>
                           </object>

@@ -283,14 +283,13 @@ static void qalculate_activate(GtkApplication *app) {
 	GList *list;
 
 	list = gtk_application_get_windows (app);
-	
+
 	if(list) {
 		gtk_window_present(GTK_WINDOW(list->data));
 		return;
 	}
 
 	create_application(app);
-
 }
 
 static gint qalculate_handle_local_options(GtkApplication *app, GVariantDict *options_dict) {

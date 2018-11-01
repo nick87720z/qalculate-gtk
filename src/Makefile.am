@@ -22,12 +22,15 @@ ui.c : $(top_srcdir)/data/ui.gresource.xml $(top_srcdir)/data/*.ui
 flags.c : $(top_srcdir)/data/flags.gresource.xml $(top_srcdir)/data/flags/*.png
 	glib-compile-resources --generate-source --target=$@ --sourcedir=$(top_srcdir)/data/flags $(top_srcdir)/data/flags.gresource.xml
 
+icons.c : $(top_srcdir)/data/icons.gresource.xml $(top_srcdir)/data/icons/*.svg
+	glib-compile-resources --generate-source --target=$@ --sourcedir=$(top_srcdir)/data/icons $(top_srcdir)/data/icons.gresource.xml
+
 qalculate_gtk_SOURCES = \
 	main.cc		main.h		\
 	interface.cc	interface.h	\
 	callbacks.cc	callbacks.h	\
 	support.h \
-	ui.c flags.c
+	ui.c flags.c icons.c
 
 qalculate_gtk_LDADD = \
 	@GLIB_LIBS@ \
