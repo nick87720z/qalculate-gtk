@@ -1422,7 +1422,11 @@ void create_main_window(void) {
 		* link_style_tr = "* { border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-top-left-radius: 0; }",
 		* link_style_bl = "* { border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; }",
 		* link_style_br = "* { border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-left-radius: 0; }",
-		* link_style_mid = "* { border-radius: 0; }";
+		* link_style_mid = "* { border-radius: 0; }",
+		* link_style_top = "* { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }",
+		* link_style_bottom = "* { border-top-left-radius: 0; border-top-right-radius: 0; }",
+		* link_style_left   = "* { border-bottom-right-radius: 0; border-top-right-radius: 0; }",
+		* link_style_right  = "* { border-bottom-left-radius: 0; border-top-left-radius: 0; }";
 
 		#define add_style(w_str, style_str) do{                                                     \
 			p = gtk_css_provider_new();                                                              \
@@ -1431,22 +1435,32 @@ void create_main_window(void) {
 			gtk_style_context_add_provider(c, GTK_STYLE_PROVIDER (p), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION); \
 		} while(0)
 
-		add_style("button_one",   link_style_bl);
-		add_style("button_two",   link_style_mid);
-		add_style("button_three", link_style_br);
-		add_style("button_four",  link_style_mid);
-		add_style("button_five",  link_style_mid);
-		add_style("button_six",   link_style_mid);
+		add_style("button_brace_open", link_style_top);
+		add_style("button_brace_close", link_style_bottom);
+
 		add_style("button_seven", link_style_tl);
 		add_style("button_eight", link_style_mid);
 		add_style("button_nine",  link_style_tr);
+		add_style("button_four",  link_style_mid);
+		add_style("button_five",  link_style_mid);
+		add_style("button_six",   link_style_mid);
+		add_style("button_one",   link_style_mid);
+		add_style("button_two",   link_style_mid);
+		add_style("button_three", link_style_mid);
+		add_style("button_zero",  link_style_bl);
+		add_style("button_dot",   link_style_mid);
+		add_style("button_exp",   link_style_br);
 
+		add_style("button_del", link_style_left);
+		add_style("button_ac",  link_style_right);
+
+		add_style("button_times",  link_style_tl);
+		add_style("button_divide", link_style_tr);
 		add_style("button_add", link_style_bl);
 		add_style("button_sub", link_style_br);
-		add_style("button_times",  link_style_mid);
-		add_style("button_divide", link_style_mid);
-		add_style("button_del", link_style_tl);
-		add_style("button_ac",  link_style_tr);
+
+		add_style("button_ans", link_style_left);
+		add_style("button_equals", link_style_right);
 
 		#undef get_c
 	}
